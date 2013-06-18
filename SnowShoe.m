@@ -1,25 +1,15 @@
-//
-//  SnowShoe.m
-//  SnowShoe
-//
-//  Created by Matt Luedke on 3/6/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "SnowShoe.h"
 #import "GTMOAuthAuthentication.h"
 
 @implementation SnowShoe
 
-@synthesize app_secret, app_id, stampResult, scan, PPMM;
+@synthesize appSecret, appId, stampResult;
 
 - (void)handleRealTap:(UIGestureRecognizer *)sender {
     
     self.stampResult = @"waiting";
     
-    if (self.app_id.length > 0 && self.app_secret.length > 0 ) {
-        
-        [self determinePPMM];
+    if (self.appId.length > 0 && self.appSecret.length > 0 ) {
         
         CGPoint tapPoint0 = [sender locationOfTouch:0 inView:self.view];
         CGPoint tapPoint1 = [sender locationOfTouch:1 inView:self.view];
@@ -27,43 +17,25 @@
         CGPoint tapPoint3 = [sender locationOfTouch:3 inView:self.view];
         CGPoint tapPoint4 = [sender locationOfTouch:4 inView:self.view];
         
-        NSDictionary *latestStamp = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:(tapPoint0.x/self.PPMM.floatValue)], @"x1",[NSNumber numberWithFloat:(tapPoint1.x/self.PPMM.floatValue)], @"x2", [NSNumber numberWithFloat:(tapPoint2.x/self.PPMM.floatValue)], @"x3", [NSNumber numberWithFloat:(tapPoint3.x/self.PPMM.floatValue)], @"x4", [NSNumber numberWithFloat:(tapPoint4.x/self.PPMM.floatValue)], @"x5", [NSNumber numberWithFloat:(tapPoint0.y/self.PPMM.floatValue)], @"y1", [NSNumber numberWithFloat:(tapPoint1.y/self.PPMM.floatValue)], @"y2", [NSNumber numberWithFloat:(tapPoint2.y/self.PPMM.floatValue)], @"y3", [NSNumber numberWithFloat:(tapPoint3.y/self.PPMM.floatValue)], @"y4", [NSNumber numberWithFloat:(tapPoint4.y/self.PPMM.floatValue)], @"y5", nil];
+        NSDictionary *latestStamp = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:tapPoint0.x], @"x1",[NSNumber numberWithFloat:tapPoint1.x], @"x2", [NSNumber numberWithFloat:tapPoint2.x], @"x3", [NSNumber numberWithFloat:tapPoint3.x], @"x4", [NSNumber numberWithFloat:tapPoint4.x], @"x5", [NSNumber numberWithFloat:tapPoint0.y], @"y1", [NSNumber numberWithFloat:tapPoint1.y], @"y2", [NSNumber numberWithFloat:tapPoint2.y], @"y3", [NSNumber numberWithFloat:tapPoint3.y], @"y4", [NSNumber numberWithFloat:tapPoint4.y], @"y5", nil];
         
         [self goOnlineAndCheckPoints:latestStamp]; 
         
     } else {
-        self.stampResult = @"error";
+        self.stampResult = @"error: neither appId nor appSecret can be empty";
     }
-}
-
-
-- (void)determinePPMM {
-    
-    // read device type, save
-    
-    // find if a multiplier is needed, based on
-    // 163 dpi for iphone / 132 dpi for iPad 1+2
-    
-    // this is now not necessary -- server scales accordingly
-    
-    if ([[[UIDevice currentDevice] model] isEqualToString:@"iPad"]) {
-        self.PPMM = [NSNumber numberWithFloat:5.197];
-    } else {
-        self.PPMM = [NSNumber numberWithFloat:6.417];
-    }
-    
 }
 
 - (void)goBack:(UISwipeGestureRecognizer *)sender {
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 -(void)goOnlineAndCheckPoints:(NSDictionary *)points {
     
     // initialize the data that we'll be getting back, and start the request string with the baseURL
-	responseData = [[NSMutableData data] retain];
+	responseData = [NSMutableData data];
 	
 	// start off the string with the base URL
 	NSString *requestString = @"http://beta.snowshoestamp.com/api/v2/stamp?";
@@ -91,11 +63,8 @@
      NSURL *url = [NSURL URLWithString:requestString];
      NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    // key a89e23b2ea0a6c31113b
-    
-    // secret fc66b715fa44b359b6a4e293a8e970024d74fc5f
-     
-     GTMOAuthAuthentication *auth = [[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1 consumerKey:self.app_id privateKey:self.app_secret] ;
+    // this method is from the gtm-oauth package.
+     GTMOAuthAuthentication *auth = [[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1 consumerKey:self.appId privateKey:self.appSecret] ;
 
     [auth addRequestTokenHeaderToRequest:request];
     
@@ -103,30 +72,11 @@
 
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
+    activityIndicator.hidden = NO;
+    [activityIndicator startAnimating];
+    
 	// the actual data is received in the connectionDidFinishLoading function	
 }
-
-- (void)isReadyForStampWithId:(NSString *)yourAppId andSecret:(NSString *)yourAppSecret {
-    
-    self.app_secret = yourAppSecret;
-    self.app_id = yourAppId;
-    return;
-}
-
-
-- (void)loading {
-	
-	if ([self.stampResult isEqualToString:@"waiting"]) {
-        activityIndicator.hidden = NO;
-		[activityIndicator startAnimating];
-    } else {
-        if (activityIndicator.hidden == NO) {
-            [activityIndicator stopAnimating];
-            activityIndicator.hidden = YES;
-		}
-    }
-}   
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -150,7 +100,7 @@
     [self.view addGestureRecognizer:tapRecognizer];
     
     
-    UISwipeGestureRecognizer *swipeRecognizer = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(goBack:)] autorelease];
+    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(goBack:)];
     
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
     swipeRecognizer.numberOfTouchesRequired = 1;
@@ -168,15 +118,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    // initialize the timer
-	timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(loading) userInfo:nil repeats:YES];
-    
+        
     // reset the stamp result and the apiKey
     self.stampResult = @"none";
-    self.app_id = @"";
-    self.app_secret = @"";
-    self.scan.alpha = 0.0;
+    activityIndicator.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -187,9 +132,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
-    
-    // end timer
-    [timer invalidate];
     
 }
 
@@ -205,25 +147,15 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	[connection release];
+	
 	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-	[responseData release];
-    
-    NSLog(@"responseString: %@", responseString);
-    
-	if (responseString == nil || [responseString rangeOfString:@"Exception"].location != NSNotFound) {
-		
-		self.stampResult = @"error";
-        NSLog(@"%@", self.stampResult);
-		return;
-	} 		
-    
-    // this next line!
+        
     self.stampResult = responseString;
     
-	[responseString release];
+    [activityIndicator stopAnimating];
+    activityIndicator.hidden = YES;
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -237,6 +169,8 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	NSLog(@"%@", [NSString stringWithFormat:@"Connection failed: %@", [error description]]);
 	self.stampResult = @"error";
+    [activityIndicator stopAnimating];
+    activityIndicator.hidden = YES;
 }
 
 @end

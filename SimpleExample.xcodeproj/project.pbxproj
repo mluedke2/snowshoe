@@ -17,7 +17,7 @@
 		FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21F215F92FEA001ECDA1 /* ViewController.m */; };
 		FAAE21F615F92FEA001ECDA1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F415F92FEA001ECDA1 /* ViewController_iPhone.xib */; };
 		FAAE21F915F92FEB001ECDA1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F715F92FEA001ECDA1 /* ViewController_iPad.xib */; };
-		FAE76EEF17702217004D0EDD /* SnowShoe.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE76ED2177020CC004D0EDD /* SnowShoe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAE76EEF17702217004D0EDD /* SnowShoe.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE76ED2177020CC004D0EDD /* SnowShoe.m */; };
 		FAE76EF1177025A7004D0EDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE76EF0177025A7004D0EDD /* Security.framework */; };
 		FAE76EF51770263E004D0EDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE76EF41770263E004D0EDD /* SystemConfiguration.framework */; };
 		FAE76EFE1770275E004D0EDD /* SnowShoe.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE76EFC1770275E004D0EDD /* SnowShoe.xib */; };

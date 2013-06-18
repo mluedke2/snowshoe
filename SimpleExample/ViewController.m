@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  FakeClientApp
-//
-//  Created by Matt Luedke on 3/6/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "ViewController.h"
 
 @implementation ViewController
@@ -14,8 +6,30 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"Status: %@", [change valueForKey:@"new"]);
-  //  NSLog(@"{\"head\":{\"total\":2,\"page\":0},\"body\":[{\"_ClassName\":\"StampObject\",\"SerialNum\":\"D1209050090\",\"Namespace\":\"snowshoe.dev\",\"CreDate\":\"Sep 08 2012 11:51 AM\",\"IdStampState\":null},{\"_ClassName\":\"StampObject\",\"SerialNum\":\"D1209050090\",\"Namespace\":\"snowshoe.dev.2\",\"CreDate\":\"Sep 08 2012 12:22 PM\",\"IdStampState\":null}]}");
+    NSString *stampResult = [change valueForKey:@"new"];
+    
+    NSLog(@"Status: %@", stampResult);
+        
+    NSData *jsonData = [stampResult dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *e;
+    NSDictionary *resultObject = [NSJSONSerialization JSONObjectWithData:jsonData options:nil error:&e];
+     
+    if (resultObject != NULL) {
+        // the result is a valid JSON, and we will now parse it
+        
+        if ([resultObject objectForKey:@"stamp"] != nil) {
+            // Success!
+            
+            NSString *stampSerial = [[resultObject objectForKey:@"stamp"] objectForKey:@"serial"];
+            NSLog(@"Success! Your stamp serial number is %@. You should do something awesome with this knowledge.", stampSerial);
+            
+        } else {
+            // Failure
+            NSLog(@"The stamp didn't return any valid serials. You should now do something awesome with this knowledge.");
+        }
+        
+    }
+    
 }
 
 -(IBAction)activateSnowShoe:(id)sender {
@@ -25,9 +39,11 @@
         snowshoe.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [snowshoe addObserver:self forKeyPath:@"stampResult" options:NSKeyValueObservingOptionNew context:nil];
     }
- //   [self presentModalViewController:snowshoe animated:YES];
-    [self presentViewController:snowshoe animated:YES completion:NULL];
-    [snowshoe isReadyForStampWithId:@"a89e23b2ea0a6c31113b" andSecret:@"fc66b715fa44b359b6a4e293a8e970024d74fc5f"];
+    
+    [self presentViewController:snowshoe animated:YES completion:^(void){
+        snowshoe.appId = @"YourAppIDGoesHere";
+        snowshoe.appSecret = @"YourAppSecretFromSnowShoeShouldGoHere";
+    }];
 }
 
 - (void)didReceiveMemoryWarning
