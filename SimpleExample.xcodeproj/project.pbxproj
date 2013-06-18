@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA11CFC6160D0F2500784223 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA11CFC5160D0F2500784223 /* Default-568h@2x.png */; };
 		FAAE21E015F92FEA001ECDA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAE21DF15F92FEA001ECDA1 /* UIKit.framework */; };
 		FAAE21E215F92FEA001ECDA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAE21E115F92FEA001ECDA1 /* Foundation.framework */; };
 		FAAE21E415F92FEA001ECDA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAE21E315F92FEA001ECDA1 /* CoreGraphics.framework */; };
@@ -16,9 +17,17 @@
 		FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21F215F92FEA001ECDA1 /* ViewController.m */; };
 		FAAE21F615F92FEA001ECDA1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F415F92FEA001ECDA1 /* ViewController_iPhone.xib */; };
 		FAAE21F915F92FEB001ECDA1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F715F92FEA001ECDA1 /* ViewController_iPad.xib */; };
+		FAE76EEF17702217004D0EDD /* SnowShoe.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE76ED2177020CC004D0EDD /* SnowShoe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAE76EF1177025A7004D0EDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE76EF0177025A7004D0EDD /* Security.framework */; };
+		FAE76EF51770263E004D0EDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE76EF41770263E004D0EDD /* SystemConfiguration.framework */; };
+		FAE76EFE1770275E004D0EDD /* SnowShoe.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE76EFC1770275E004D0EDD /* SnowShoe.xib */; };
+		FAE76EFF1770275E004D0EDD /* stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE76EFD1770275E004D0EDD /* stamp.png */; };
+		FAF963F91770D5480088FE5F /* GTMOAuthAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF963F31770D4710088FE5F /* GTMOAuthAuthentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FAF963FE1770F94D0088FE5F /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF963FD1770F9440088FE5F /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA11CFC5160D0F2500784223 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FAAE21DB15F92FEA001ECDA1 /* SimpleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAE21DF15F92FEA001ECDA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FAAE21E115F92FEA001ECDA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -33,6 +42,16 @@
 		FAAE21F215F92FEA001ECDA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FAAE21F515F92FEA001ECDA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		FAAE21F815F92FEB001ECDA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		FAE76ED1177020CC004D0EDD /* SnowShoe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowShoe.h; sourceTree = "<group>"; };
+		FAE76ED2177020CC004D0EDD /* SnowShoe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowShoe.m; sourceTree = "<group>"; };
+		FAE76EF0177025A7004D0EDD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAE76EF41770263E004D0EDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAE76EFC1770275E004D0EDD /* SnowShoe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnowShoe.xib; sourceTree = "<group>"; };
+		FAE76EFD1770275E004D0EDD /* stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp.png; sourceTree = "<group>"; };
+		FAF963F21770D4710088FE5F /* GTMOAuthAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMOAuthAuthentication.h; sourceTree = "<group>"; };
+		FAF963F31770D4710088FE5F /* GTMOAuthAuthentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthAuthentication.m; sourceTree = "<group>"; };
+		FAF963FC1770F9440088FE5F /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		FAF963FD1770F9440088FE5F /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE76EF51770263E004D0EDD /* SystemConfiguration.framework in Frameworks */,
+				FAE76EF1177025A7004D0EDD /* Security.framework in Frameworks */,
 				FAAE21E015F92FEA001ECDA1 /* UIKit.framework in Frameworks */,
 				FAAE21E215F92FEA001ECDA1 /* Foundation.framework in Frameworks */,
 				FAAE21E415F92FEA001ECDA1 /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +73,8 @@
 		FAAE21D015F92FEA001ECDA1 = {
 			isa = PBXGroup;
 			children = (
+				FAF963EF1770D4590088FE5F /* gtm-oauth */,
+				FAAE21FF15F92FF4001ECDA1 /* SnowShoe */,
 				FAAE21E515F92FEA001ECDA1 /* SimpleExample */,
 				FAAE21DE15F92FEA001ECDA1 /* Frameworks */,
 				FAAE21DC15F92FEA001ECDA1 /* Products */,
@@ -69,6 +92,8 @@
 		FAAE21DE15F92FEA001ECDA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAE76EF41770263E004D0EDD /* SystemConfiguration.framework */,
+				FAE76EF0177025A7004D0EDD /* Security.framework */,
 				FAAE21DF15F92FEA001ECDA1 /* UIKit.framework */,
 				FAAE21E115F92FEA001ECDA1 /* Foundation.framework */,
 				FAAE21E315F92FEA001ECDA1 /* CoreGraphics.framework */,
@@ -79,6 +104,7 @@
 		FAAE21E515F92FEA001ECDA1 /* SimpleExample */ = {
 			isa = PBXGroup;
 			children = (
+				FA11CFC5160D0F2500784223 /* Default-568h@2x.png */,
 				FAAE21EE15F92FEA001ECDA1 /* AppDelegate.h */,
 				FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */,
 				FAAE21F115F92FEA001ECDA1 /* ViewController.h */,
@@ -99,6 +125,28 @@
 				FAAE21ED15F92FEA001ECDA1 /* SimpleExample-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAAE21FF15F92FF4001ECDA1 /* SnowShoe */ = {
+			isa = PBXGroup;
+			children = (
+				FAE76ED1177020CC004D0EDD /* SnowShoe.h */,
+				FAE76ED2177020CC004D0EDD /* SnowShoe.m */,
+				FAE76EFC1770275E004D0EDD /* SnowShoe.xib */,
+				FAE76EFD1770275E004D0EDD /* stamp.png */,
+			);
+			name = SnowShoe;
+			sourceTree = "<group>";
+		};
+		FAF963EF1770D4590088FE5F /* gtm-oauth */ = {
+			isa = PBXGroup;
+			children = (
+				FAF963FC1770F9440088FE5F /* GTMHTTPFetcher.h */,
+				FAF963FD1770F9440088FE5F /* GTMHTTPFetcher.m */,
+				FAF963F21770D4710088FE5F /* GTMOAuthAuthentication.h */,
+				FAF963F31770D4710088FE5F /* GTMOAuthAuthentication.m */,
+			);
+			name = "gtm-oauth";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +203,9 @@
 				FAAE21EA15F92FEA001ECDA1 /* InfoPlist.strings in Resources */,
 				FAAE21F615F92FEA001ECDA1 /* ViewController_iPhone.xib in Resources */,
 				FAAE21F915F92FEB001ECDA1 /* ViewController_iPad.xib in Resources */,
+				FA11CFC6160D0F2500784223 /* Default-568h@2x.png in Resources */,
+				FAE76EFE1770275E004D0EDD /* SnowShoe.xib in Resources */,
+				FAE76EFF1770275E004D0EDD /* stamp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF963FE1770F94D0088FE5F /* GTMHTTPFetcher.m in Sources */,
+				FAF963F91770D5480088FE5F /* GTMOAuthAuthentication.m in Sources */,
+				FAE76EEF17702217004D0EDD /* SnowShoe.m in Sources */,
 				FAAE21EC15F92FEA001ECDA1 /* main.m in Sources */,
 				FAAE21F015F92FEA001ECDA1 /* AppDelegate.m in Sources */,
 				FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */,
@@ -257,7 +311,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleExample/SimpleExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$SDKROOT/usr/include/libxml2/**";
 				INFOPLIST_FILE = "SimpleExample/SimpleExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -268,7 +327,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleExample/SimpleExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$SDKROOT/usr/include/libxml2/**";
 				INFOPLIST_FILE = "SimpleExample/SimpleExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +357,7 @@
 				FAAE21FE15F92FEB001ECDA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SnowShoe.h"
 
-@interface ViewController : UIViewController
+@class SnowShoe;
+
+@interface ViewController : UIViewController {
+    
+    SnowShoe *snowshoe;
+    
+}
+
+@property(nonatomic, strong) SnowShoe *snowshoe;
+
+-(IBAction)activateSnowShoe:(id)sender;
 
 @end
