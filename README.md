@@ -1,9 +1,9 @@
 iOS wrapper for SnowShoe SDK v2
 ===============================
 
-This repo contains an example project using the [SnowShoe Stamp](snow.sh). You can:
+This repo contains an example project using the [SnowShoe Stamp](http://www.snowshoestamp.com). You can:
 
-* Download the example project to see how easy it is to drop in [SnowShoe](snow.sh) functionality.
+* Download the example project to see how easy it is to drop in [SnowShoe](http://www.snowshoestamp.com) functionality.
 
 -or-
 
@@ -14,7 +14,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 
 * Download the whole repository and open up SimpleExample.xcodeproj in Xcode.
 
-* Make sure to insert your `appKey` and `appSecret` that you get from the [SnowShoe site](snow.sh) when you register a new application (which is totally free!). In the ViewController.m file, look for the spots labelled: `your_app_key_here` and `your_app_secret_here`.
+* Make sure to insert your `appKey` and `appSecret` that you get from the [SnowShoe site](http://www.snowshoestamp.com) when you register a new application (which is totally free!). In the ViewController.m file, look for the spots labelled: `your_app_key_here` and `your_app_secret_here`.
 
 * *If you don't put in a valid key/secret pair, the SnowShoe servers will disapprove of you. Stay on their good side and feed them a key and secret!*
 
@@ -44,7 +44,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 
 * You'll want to take everything in the "SnowShoe" folder and copy it into your own project. Make sure that all the .m files are included in your Compile Sources, and the .xib and .png files are included in your Copy Bundle Resources.
 
-* To interact with the [SnowShoe](snow.sh) servers, one must use OAuth 1.0a. But this project uses classes from [gtm-oauth](https://code.google.com/p/gtm-oauth/) and is set up so that you don't have to worry about it!
+* To interact with the [SnowShoe](http://www.snowshoestamp.com) servers, one must use OAuth 1.0a. But this project uses classes from [gtm-oauth](https://code.google.com/p/gtm-oauth/) and is set up so that you don't have to worry about it!
 
 * *Make sure to add the "-fno-objc-arc" flag to the GTM classes! Do this by clicking on your target, then Build Phases, then Compile Sources. Double click in the Compiler Flags column for those classes and add the flag. Otherwise you will get a bunch of errors for them not being ARC.*
 
@@ -55,4 +55,4 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 Questions?
 ==========
 
-For hardware or API questions/feedback, address those to [SnowShoe](snow.sh) directly. For questions/feedback on this library, email me at mluedke2@gmail.com, visit [my blog](http://www.mattluedke.com), or [follow me on Twitter](https://twitter.com/matt_luedke)
+For hardware or API questions/feedback, address those to [SnowShoe](http://www.snowshoestamp.com) directly. For questions/feedback on this library, email me at mluedke2@gmail.com, visit [my blog](http://www.mattluedke.com), or [follow me on Twitter](https://twitter.com/matt_luedke)
