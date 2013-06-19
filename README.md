@@ -55,4 +55,4 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 Questions?
 ==========
 
-For hardware or API questions/feedback, address those to [SnowShoe](snow.sh) directly. For questions/feedback on this library, email me at mluedke2@gmail.com, visit [my blog](mattluedke.com), or [follow me on Twitter](https://twitter.com/matt_luedke)
+For hardware or API questions/feedback, address those to [SnowShoe](snow.sh) directly. For questions/feedback on this library, email me at mluedke2@gmail.com, visit [my blog](http://www.mattluedke.com), or [follow me on Twitter](https://twitter.com/matt_luedke)
