@@ -21,11 +21,11 @@
             // Success!
             
             NSString *stampSerial = [[resultObject objectForKey:@"stamp"] objectForKey:@"serial"];
-            NSLog(@"Success! Your stamp serial number is %@. You should do something awesome with this knowledge.", stampSerial);
+            NSLog(@"Success! Your stamp serial number is %@. You should go do something awesome with this knowledge.", stampSerial);
             
         } else {
             // Failure
-            NSLog(@"The stamp didn't return any valid serials. You should now do something awesome with this knowledge.");
+            NSLog(@"The stamp didn't return any valid serials. You should now do something awesome with this knowledge, like tell your user to use a valid stamp or try again.");
         }
         
     }
@@ -41,8 +41,8 @@
     }
     
     [self presentViewController:snowshoe animated:YES completion:^(void){
-        snowshoe.appId = @"YourAppIDGoesHere";
-        snowshoe.appSecret = @"YourAppSecretFromSnowShoeShouldGoHere";
+        snowshoe.appId = @"a89e23b2ea0a6c31113b";
+        snowshoe.appSecret = @"fc66b715fa44b359b6a4e293a8e970024d74fc5f";
     }];
 }
 
