@@ -5,11 +5,11 @@
     NSMutableData *responseData;
     NSString *stampResult;
     NSString *appSecret;
-    NSString *appId;
+    NSString *appKey;
     IBOutlet UIActivityIndicatorView *activityIndicator;
 }
 @property (nonatomic, retain) NSString *stampResult;
 @property (nonatomic, retain) NSString *appSecret;
-@property (nonatomic, retain) NSString *appId;
+@property (nonatomic, retain) NSString *appKey;
 
 @end

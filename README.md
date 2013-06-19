@@ -7,7 +7,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 
 -or-
 
-* Just grab the folder labelled "SnowShoe" that contains the guts, and get it working in your own project. (Skip down to Section 2)
+* Just grab the folder labelled "SnowShoe" that contains the guts, and get it working in your own project. ([Skip down to Section 2](https://github.com/mluedke2/snowshoe#2-use-in-your-own-project))
 
 1. Test-run the Example
 -----------------------
@@ -16,7 +16,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 
 * Make sure to insert your `appKey` and `appSecret` that you get from the [SnowShoe site](snow.sh) when you register a new application (which is totally free!). In the ViewController.m file, look for the spots labelled: `your_app_key_here` and `your_app_secret_here`.
 
-*If you don't put in a valid key/secret pair, the SnowShoe servers will disapprove of you. Stay on their good side and feed them a key and secret!*
+* *If you don't put in a valid key/secret pair, the SnowShoe servers will disapprove of you. Stay on their good side and feed them a key and secret!*
 
 * Run your project on a touchscreen device, and select View > Debug Area > Activate Console. As you navigate to the "stamp screen," notice that the log will get updated. Stamp your phone with your developer's stamp ([need one? they're totally free](https://beta.snowshoestamp.com/get_started/)) and you can hopefully see a result like this:
 
@@ -26,7 +26,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 * I've gone ahead and written the beginnings of a parser that simply makes note of the serial number (if any), and logs something like the following:
 
 >Success! Your stamp serial number is DEV-STAMP.
-> You should go do something responsible with this great power.`
+> You should go do something responsible with this great power.
 
 * If you use a production (aka not the free developer) stamp that hasn't been tied to your `appKey`, or press your fingers against the phone, or whatever, you'll get a message like the following:
 
@@ -37,7 +37,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 
 >The stamp didn't return any valid serials.
 > You should now do something responsible with this great power,
-> like tell your user to use a valid stamp or try again.`
+> like tell your user to use a valid stamp or try again.
 
 2. Use in your own Project
 --------------------------
@@ -46,7 +46,7 @@ This repo contains an example project using the [SnowShoe Stamp](snow.sh). You c
 
 * To interact with the [SnowShoe](snow.sh) servers, one must use OAuth 1.0a. But this project uses classes from [gtm-oauth](https://code.google.com/p/gtm-oauth/) and is set up so that you don't have to worry about it!
 
-*Make sure to add the "-fno-objc-arc" flag to the GTM classes! Do this by clicking on your target, then Build Phases, then Compile Sources. Double click in the Compiler Flags column for those classes and add the flag. Otherwise you will get a bunch of errors for them not being ARC.*
+* *Make sure to add the "-fno-objc-arc" flag to the GTM classes! Do this by clicking on your target, then Build Phases, then Compile Sources. Double click in the Compiler Flags column for those classes and add the flag. Otherwise you will get a bunch of errors for them not being ARC.*
 
 * Mimic the functions in the sample project to present the "stamp screen," set the `appKey` and `appSecret` before making any queries, and monitor the stampResult.
 

@@ -3,13 +3,13 @@
 
 @implementation SnowShoe
 
-@synthesize appSecret, appId, stampResult;
+@synthesize appSecret, appKey, stampResult;
 
 - (void)handleRealTap:(UIGestureRecognizer *)sender {
     
     self.stampResult = @"waiting";
     
-    if (self.appId.length > 0 && self.appSecret.length > 0 ) {
+    if (self.appKey.length > 0 && self.appSecret.length > 0 ) {
         
         CGPoint tapPoint0 = [sender locationOfTouch:0 inView:self.view];
         CGPoint tapPoint1 = [sender locationOfTouch:1 inView:self.view];
@@ -22,7 +22,7 @@
         [self goOnlineAndCheckPoints:latestStamp]; 
         
     } else {
-        self.stampResult = @"error: neither appId nor appSecret can be empty";
+        self.stampResult = @"error: neither appKey nor appSecret can be empty";
     }
 }
 
@@ -64,7 +64,7 @@
      NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     // this method is from the gtm-oauth package.
-     GTMOAuthAuthentication *auth = [[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1 consumerKey:self.appId privateKey:self.appSecret] ;
+     GTMOAuthAuthentication *auth = [[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1 consumerKey:self.appKey privateKey:self.appSecret] ;
 
     [auth addRequestTokenHeaderToRequest:request];
     
