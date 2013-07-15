@@ -40,11 +40,6 @@
 	// start off the string with the base URL
 	NSString *requestString = @"http://beta.snowshoestamp.com/api/v2/stamp?";
     
-    // {"1":{"x":210,"y":135},"2":{"x":102,"y":182},"3":{"x":95,"y":31},"4":{"x":202,"y":24},"5":{"x":180,"y":177}}
-
-    requestString = [requestString stringByAppendingFormat:@"x1=210&x2=102&x3=95&x4=202&x5=180&y1=135&y2=182&y3=31&y4=24&y5=177"];
-    
-/*
     requestString = [requestString stringByAppendingFormat:@"x1=%@", [points objectForKey:@"x1"]];
     
     requestString = [requestString stringByAppendingFormat:@"&x2=%@", [points objectForKey:@"x2"]];
@@ -64,7 +59,6 @@
     requestString = [requestString stringByAppendingFormat:@"&y4=%@", [points objectForKey:@"y4"]];
     
     requestString = [requestString stringByAppendingFormat:@"&y5=%@", [points objectForKey:@"y5"]];
-    */
        
      NSURL *url = [NSURL URLWithString:requestString];
      NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
