@@ -41,8 +41,8 @@
     }
     
     [self presentViewController:snowshoe animated:YES completion:^(void){
-        snowshoe.appKey = @"your_app_key_here";
-        snowshoe.appSecret = @"your_app_secret_here";
+        snowshoe.appKey = @"a89e23b2ea0a6c31113b";
+        snowshoe.appSecret = @"fc66b715fa44b359b6a4e293a8e970024d74fc5f";
     }];
 }
 
