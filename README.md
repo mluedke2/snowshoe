@@ -14,7 +14,7 @@ This repo contains an example project using the [SnowShoe Stamp](http://www.snow
 
 * Download the whole repository and open up SimpleExample.xcodeproj in Xcode.
 
-* Make sure to insert your `appKey` and `appSecret` that you get from the [SnowShoe site](http://www.snowshoestamp.com) when you register a new application (which is totally free!). In the ViewController.m file, look for the spots labelled: `your_app_key_here` and `your_app_secret_here`.
+* Make sure to insert your `appKey` and `appSecret` that you get from the [SnowShoe site](http://www.snowshoestamp.com) when you register a new application (which is totally free!). In the ViewController.m file, look for the spots labelled: `your_key` and `your_secret`.
 
 * *If you don't put in a valid key/secret pair, the SnowShoe servers will disapprove of you. Stay on their good side and feed them a key and secret!*
 
