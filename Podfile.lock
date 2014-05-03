@@ -1,0 +1,12 @@
+PODS:
+  - gtm-oauth (0.0.1):
+    - gtm-oauth/nibs
+  - gtm-oauth/nibs (0.0.1)
+
+DEPENDENCIES:
+  - gtm-oauth (~> 0.0.1)
+
+SPEC CHECKSUMS:
+  gtm-oauth: b2725c564e3d50c8b6109ac292414a9cceb47dd0
+
+COCOAPODS: 0.32.1

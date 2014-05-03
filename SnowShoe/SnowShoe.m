@@ -1,5 +1,5 @@
 #import "SnowShoe.h"
-#import "GTMOAuthAuthentication.h"
+#import <GTMOAuthAuthentication.h>
 
 @implementation SnowShoe
 
