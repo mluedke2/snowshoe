@@ -16,12 +16,11 @@
 		FAAE21EC15F92FEA001ECDA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21EB15F92FEA001ECDA1 /* main.m */; };
 		FAAE21F015F92FEA001ECDA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */; };
 		FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21F215F92FEA001ECDA1 /* ViewController.m */; };
-		FAAE21F615F92FEA001ECDA1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F415F92FEA001ECDA1 /* ViewController_iPhone.xib */; };
-		FAAE21F915F92FEB001ECDA1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F715F92FEA001ECDA1 /* ViewController_iPad.xib */; };
+		FAAE21F615F92FEA001ECDA1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F415F92FEA001ECDA1 /* ViewController.xib */; };
 		FAAF7F5119146F7700D1FE4C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF7F5019146F7700D1FE4C /* libz.dylib */; };
-		FADB48A1177177DD0016B36F /* SnowShoe.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB489C177177C50016B36F /* SnowShoe.m */; };
-		FADB48A2177177E50016B36F /* SnowShoe.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADB489D177177C50016B36F /* SnowShoe.xib */; };
-		FADB48A3177177E50016B36F /* stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = FADB489E177177C50016B36F /* stamp.png */; };
+		FAAF7F551914739000D1FE4C /* StampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF7F531914739000D1FE4C /* StampViewController.m */; };
+		FAAF7F561914739000D1FE4C /* StampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAF7F541914739000D1FE4C /* StampViewController.xib */; };
+		FADB48A1177177DD0016B36F /* SnowShoeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB489C177177C50016B36F /* SnowShoeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,16 +39,16 @@
 		FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FAAE21F115F92FEA001ECDA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FAAE21F215F92FEA001ECDA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FAAE21F515F92FEA001ECDA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		FAAE21F815F92FEB001ECDA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		FAAE21F515F92FEA001ECDA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		FAAF7F4A19146E0500D1FE4C /* libPods-gtm-oauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-gtm-oauth.a"; path = "Pods/build/Debug-iphoneos/libPods-gtm-oauth.a"; sourceTree = "<group>"; };
 		FAAF7F4C19146E0B00D1FE4C /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		FAAF7F4E19146E2000D1FE4C /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		FAAF7F5019146F7700D1FE4C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		FADB489B177177C50016B36F /* SnowShoe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SnowShoe.h; path = SnowShoe/SnowShoe.h; sourceTree = "<group>"; };
-		FADB489C177177C50016B36F /* SnowShoe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SnowShoe.m; path = SnowShoe/SnowShoe.m; sourceTree = "<group>"; };
-		FADB489D177177C50016B36F /* SnowShoe.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SnowShoe.xib; path = SnowShoe/SnowShoe.xib; sourceTree = "<group>"; };
-		FADB489E177177C50016B36F /* stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stamp.png; path = SnowShoe/stamp.png; sourceTree = "<group>"; };
+		FAAF7F521914739000D1FE4C /* StampViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StampViewController.h; sourceTree = "<group>"; };
+		FAAF7F531914739000D1FE4C /* StampViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StampViewController.m; sourceTree = "<group>"; };
+		FAAF7F541914739000D1FE4C /* StampViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StampViewController.xib; sourceTree = "<group>"; };
+		FADB489B177177C50016B36F /* SnowShoeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SnowShoeViewController.h; path = SnowShoe/SnowShoeViewController.h; sourceTree = "<group>"; };
+		FADB489C177177C50016B36F /* SnowShoeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SnowShoeViewController.m; path = SnowShoe/SnowShoeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +109,11 @@
 				FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */,
 				FAAE21F115F92FEA001ECDA1 /* ViewController.h */,
 				FAAE21F215F92FEA001ECDA1 /* ViewController.m */,
-				FAAE21F415F92FEA001ECDA1 /* ViewController_iPhone.xib */,
-				FAAE21F715F92FEA001ECDA1 /* ViewController_iPad.xib */,
+				FAAE21F415F92FEA001ECDA1 /* ViewController.xib */,
 				FAAE21E615F92FEA001ECDA1 /* Supporting Files */,
+				FAAF7F521914739000D1FE4C /* StampViewController.h */,
+				FAAF7F531914739000D1FE4C /* StampViewController.m */,
+				FAAF7F541914739000D1FE4C /* StampViewController.xib */,
 			);
 			path = SimpleExample;
 			sourceTree = "<group>";
@@ -131,10 +132,8 @@
 		FAAE21FF15F92FF4001ECDA1 /* SnowShoe */ = {
 			isa = PBXGroup;
 			children = (
-				FADB489B177177C50016B36F /* SnowShoe.h */,
-				FADB489C177177C50016B36F /* SnowShoe.m */,
-				FADB489D177177C50016B36F /* SnowShoe.xib */,
-				FADB489E177177C50016B36F /* stamp.png */,
+				FADB489B177177C50016B36F /* SnowShoeViewController.h */,
+				FADB489C177177C50016B36F /* SnowShoeViewController.m */,
 			);
 			name = SnowShoe;
 			sourceTree = "<group>";
@@ -192,11 +191,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADB48A2177177E50016B36F /* SnowShoe.xib in Resources */,
-				FADB48A3177177E50016B36F /* stamp.png in Resources */,
+				FAAF7F561914739000D1FE4C /* StampViewController.xib in Resources */,
 				FAAE21EA15F92FEA001ECDA1 /* InfoPlist.strings in Resources */,
-				FAAE21F615F92FEA001ECDA1 /* ViewController_iPhone.xib in Resources */,
-				FAAE21F915F92FEB001ECDA1 /* ViewController_iPad.xib in Resources */,
+				FAAE21F615F92FEA001ECDA1 /* ViewController.xib in Resources */,
 				FA11CFC6160D0F2500784223 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,9 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADB48A1177177DD0016B36F /* SnowShoe.m in Sources */,
+				FADB48A1177177DD0016B36F /* SnowShoeViewController.m in Sources */,
 				FAAE21EC15F92FEA001ECDA1 /* main.m in Sources */,
 				FAAE21F015F92FEA001ECDA1 /* AppDelegate.m in Sources */,
+				FAAF7F551914739000D1FE4C /* StampViewController.m in Sources */,
 				FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,20 +257,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FAAE21F415F92FEA001ECDA1 /* ViewController_iPhone.xib */ = {
+		FAAE21F415F92FEA001ECDA1 /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FAAE21F515F92FEA001ECDA1 /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		FAAE21F715F92FEA001ECDA1 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAAE21F815F92FEB001ECDA1 /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -307,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,7 +341,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleExample/SimpleExample-Prefix.pch";
 				INFOPLIST_FILE = "SimpleExample/SimpleExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -370,7 +360,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleExample/SimpleExample-Prefix.pch";
 				INFOPLIST_FILE = "SimpleExample/SimpleExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
