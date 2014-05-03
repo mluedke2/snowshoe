@@ -15,8 +15,6 @@
 		FAAE21EA15F92FEA001ECDA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21E815F92FEA001ECDA1 /* InfoPlist.strings */; };
 		FAAE21EC15F92FEA001ECDA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21EB15F92FEA001ECDA1 /* main.m */; };
 		FAAE21F015F92FEA001ECDA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */; };
-		FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE21F215F92FEA001ECDA1 /* ViewController.m */; };
-		FAAE21F615F92FEA001ECDA1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAE21F415F92FEA001ECDA1 /* ViewController.xib */; };
 		FAAF7F5119146F7700D1FE4C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF7F5019146F7700D1FE4C /* libz.dylib */; };
 		FAAF7F551914739000D1FE4C /* StampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF7F531914739000D1FE4C /* StampViewController.m */; };
 		FAAF7F561914739000D1FE4C /* StampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAF7F541914739000D1FE4C /* StampViewController.xib */; };
@@ -37,9 +35,6 @@
 		FAAE21ED15F92FEA001ECDA1 /* SimpleExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleExample-Prefix.pch"; sourceTree = "<group>"; };
 		FAAE21EE15F92FEA001ECDA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAAE21F115F92FEA001ECDA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FAAE21F215F92FEA001ECDA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FAAE21F515F92FEA001ECDA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		FAAF7F4A19146E0500D1FE4C /* libPods-gtm-oauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-gtm-oauth.a"; path = "Pods/build/Debug-iphoneos/libPods-gtm-oauth.a"; sourceTree = "<group>"; };
 		FAAF7F4C19146E0B00D1FE4C /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		FAAF7F4E19146E2000D1FE4C /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
@@ -104,13 +99,10 @@
 		FAAE21E515F92FEA001ECDA1 /* SimpleExample */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE21E615F92FEA001ECDA1 /* Supporting Files */,
 				FA11CFC5160D0F2500784223 /* Default-568h@2x.png */,
 				FAAE21EE15F92FEA001ECDA1 /* AppDelegate.h */,
 				FAAE21EF15F92FEA001ECDA1 /* AppDelegate.m */,
-				FAAE21F115F92FEA001ECDA1 /* ViewController.h */,
-				FAAE21F215F92FEA001ECDA1 /* ViewController.m */,
-				FAAE21F415F92FEA001ECDA1 /* ViewController.xib */,
-				FAAE21E615F92FEA001ECDA1 /* Supporting Files */,
 				FAAF7F521914739000D1FE4C /* StampViewController.h */,
 				FAAF7F531914739000D1FE4C /* StampViewController.m */,
 				FAAF7F541914739000D1FE4C /* StampViewController.xib */,
@@ -193,7 +185,6 @@
 			files = (
 				FAAF7F561914739000D1FE4C /* StampViewController.xib in Resources */,
 				FAAE21EA15F92FEA001ECDA1 /* InfoPlist.strings in Resources */,
-				FAAE21F615F92FEA001ECDA1 /* ViewController.xib in Resources */,
 				FA11CFC6160D0F2500784223 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,7 +233,6 @@
 				FAAE21EC15F92FEA001ECDA1 /* main.m in Sources */,
 				FAAE21F015F92FEA001ECDA1 /* AppDelegate.m in Sources */,
 				FAAF7F551914739000D1FE4C /* StampViewController.m in Sources */,
-				FAAE21F315F92FEA001ECDA1 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,14 +245,6 @@
 				FAAE21E915F92FEA001ECDA1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		FAAE21F415F92FEA001ECDA1 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAAE21F515F92FEA001ECDA1 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

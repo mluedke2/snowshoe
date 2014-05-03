@@ -51,8 +51,6 @@ static NSString * const waiting = @"waiting";
     }
 }
 
-#pragma mark - View lifecycle
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
