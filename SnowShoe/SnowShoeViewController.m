@@ -2,7 +2,6 @@
 #import <GTMOAuthAuthentication.h>
 
 static NSString * const baseURL = @"http://beta.snowshoestamp.com/api/v2/stamp?";
-static NSString * const waiting = @"waiting";
 
 @interface SnowShoeViewController()
 
@@ -54,7 +53,6 @@ static NSString * const waiting = @"waiting";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     // initialize the gesture recognizer
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleStamp:)];
