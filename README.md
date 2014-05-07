@@ -3,7 +3,9 @@ iOS wrapper for SnowShoe
 
 The [SnowShoe Stamp](http://www.snowshoestamp.com) is a 3D-printed authentication tool for smartphones. 
 
-![](https://beta.snowshoestamp.com/static/api/img/stamp.gif)
+<p align="center" >
+  <img src="https://beta.snowshoestamp.com/static/api/img/stamp.gif" alt="SnowShoe" title="SnowShoe" width="160" height="284">
+</p>
 
 Installation with CocoaPods
 ===========================
