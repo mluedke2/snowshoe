@@ -1,6 +1,9 @@
 iOS wrapper for SnowShoe
 ========================
 
+**DEPRECATED - Please use [SnowShoe-Swift](https://github.com/mluedke2/SnowShoe-Swift) instead.**
+
+
 The [SnowShoe Stamp](http://www.snowshoestamp.com) is a 3D-printed authentication tool for smartphones. 
 
 <p align="center" >
