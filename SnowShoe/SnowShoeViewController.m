@@ -1,5 +1,5 @@
 #import "SnowShoeViewController.h"
-#import <GTMOAuthAuthentication.h>
+#import "GTMOAuthAuthentication.h"
 
 static NSString * const baseURL = @"http://beta.snowshoestamp.com/api/v2/stamp?";
 
